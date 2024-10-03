@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing NGINX
+  build:
+    commands:
+      - echo Building the project...
+      - cp Index.html /var/www/html/
+  post_build:
+    commands:
+      - echo Build completed successfully.
+
+artifacts:
+  files:
+    - /var/www/html/index.html
+  discard-paths: yes
