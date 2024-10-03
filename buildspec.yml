@@ -10,11 +10,12 @@ phases:
     commands:
       - echo Building the project...
       - cp index.html /var/www/html/
+      - cp appspec.yml /var/www/html/
   post_build:
     commands:
       - echo Build completed successfully.
 
 artifacts:
   files:
-    - /var/www/html/index.html
+    - /var/www/html
   discard-paths: yes
